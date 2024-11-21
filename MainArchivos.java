@@ -4,14 +4,14 @@ public class MainArchivos {
         Almacenamiento AlmacenamientoNube = new AlmacenamientoNube();
         GestorArchivos gestorArchivos = new GestorArchivos(AlmacenamientoNube);
         gestorArchivos.GuardarContenido("Foto familia", "imagen");
-        gestorArchivos.RecuperarContenido("Foto playa", "23/11/19", "Imagen" );
+        gestorArchivos.RecuperarArchivos("Foto playa", "23/11/19", "Imagen" );
 
 
 
         Almacenamiento AlmacenamientoLocal = new AlmacenamientoLocal();
         gestorArchivos = new GestorArchivos(AlmacenamientoLocal);
         gestorArchivos.GuardarContenido("Curriculum", "PDF");
-        gestorArchivos.RecuperarContenido("Renuncia trabajo", "23/11/19", "WORD" );
+        gestorArchivos.RecuperarArchivos("Renuncia trabajo", "23/11/19", "WORD" );
 
     }
 

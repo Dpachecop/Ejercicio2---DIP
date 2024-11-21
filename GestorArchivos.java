@@ -1,4 +1,4 @@
-public class GestorArchivos {
+public class GestorArchivos implements Almacenamiento {
 
     Almacenamiento almacenamiento;
 
@@ -8,15 +8,17 @@ public class GestorArchivos {
 
     }
 
-    public void GuardarContenido(String nombre, String tipoArchivo) {
+    
 
-        almacenamiento.GuardarContenido(nombre, tipoArchivo);
-
+    @Override
+    public void RecuperarArchivos(String nombre, String fechaEliminacion, String tipoArchivo) {
+         almacenamiento.RecuperarArchivos(nombre, fechaEliminacion, tipoArchivo);
     }
 
-    public void RecuperarContenido(String nombre, String fecha, String tipoArchivo) {
 
-        almacenamiento.RecuperarArchivos(nombre, fecha, tipoArchivo);
 
+    @Override
+    public void GuardarContenido(String nombre, String tipoArchivo) {
+        almacenamiento.GuardarContenido(nombre, tipoArchivo);
     }
 }
