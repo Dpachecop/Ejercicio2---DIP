@@ -1,4 +1,4 @@
-public class Main {
+public class MainArchivos {
     public static void main(String[] args) {
 
         Almacenamiento AlmacenamientoNube = new AlmacenamientoNube();
